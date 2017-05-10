@@ -7,7 +7,6 @@ app.factory('AdminFactory', ['$http','$route', '$firebaseAuth', function($http,$
   var userResults = {list: []};
   var ideaToFlagObject = {list: []};
   var commentToFlagObject = {list: []};
-  var admin = {list: []};
 
   // init(); //run
 
@@ -16,7 +15,6 @@ app.factory('AdminFactory', ['$http','$route', '$firebaseAuth', function($http,$
     getUsers();
     filterUsers();
   }
-
 
   //function to display user list on manage users admin view
   function getUsers() {
@@ -324,8 +322,6 @@ if(firebaseUser){
 
 
   return {
-    admin: admin,
-    checkIfAdmin: checkIfAdmin,
     allUsers: allUsers,
     updateFlaggedComment:updateFlaggedComment,
     updateFlaggedIdea:updateFlaggedIdea,
